@@ -5,6 +5,8 @@ import { spacing } from "../theme/spacing";
 import { typography } from "../theme/typography";
 
 export const IntroSection = styled(SectionContainer)`
+scroll-margin-top: 30px;
+
   background-color: ${colors.background.base};
   color: ${colors.text.primary};
   padding-top: ${spacing.mediumLow};
@@ -38,11 +40,12 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-export const ImagePlaceholder = styled.div`
+export const ProfileImage = styled.img`
   width: 320px;
   aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
   border: 2px solid ${colors.border.default};
-  background-color: ${colors.background.subtle};
 
   @media (max-width: 900px) {
     width: min(100%, 320px);

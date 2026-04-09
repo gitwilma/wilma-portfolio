@@ -16,8 +16,8 @@ export const NavBar = () => {
 
           <Nav aria-label="Section navigation">
             <NavLink href="#selected-work">Selected work</NavLink>
-            <NavLink href="#skill-set">Skill set</NavLink>
             <NavLink href="#about-me">About me</NavLink>
+            <NavLink href="#skill-set">Skill set</NavLink>
           </Nav>
         </NavBarInner>
       </PageContainer>

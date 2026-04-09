@@ -5,33 +5,18 @@ import { typography } from "../../theme/typography";
 
 export const ExpandedCardContainer = styled.article`
   width: 100%;
+  background-color: ${colors.background.surface};
   color: ${colors.text.primary};
-`;
-
-export const SectionHeader = styled.div`
+  padding-top: ${spacing.large};
   padding-bottom: ${spacing.large};
-`;
-
-export const IntroTitle = styled.h3`
-  ${typography.display.large};
-  margin: 0;
-  color: ${colors.text.primary};
-`;
-
-export const Divider = styled.div`
-  width: 100%;
-  height: 1px;
-  background-color: ${colors.border.default};
 `;
 
 export const ContentGrid = styled.div`
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 360px;
   column-gap: ${spacing.xxlarge};
-  row-gap: ${spacing.medium};
+  row-gap: ${spacing.large};
   align-items: start;
-  padding-top: ${spacing.mediumLow};
-  padding-bottom: ${spacing.mediumLow};
 
   @media (max-width: 1100px) {
     grid-template-columns: 1fr 1fr;
@@ -51,18 +36,15 @@ export const TextHeading = styled.h4`
 
 export const CloseButton = styled.button`
   ${typography.button.medium};
-
   appearance: none;
   justify-self: end;
   align-self: start;
-
   background: none;
   border: none;
   padding: 0;
   margin: 0;
   color: ${colors.text.primary};
   cursor: pointer;
-  flex-shrink: 0;
 
   &:hover {
     text-decoration: underline;
@@ -98,7 +80,6 @@ export const ImageArea = styled.div`
   align-items: center;
   justify-content: center;
   min-height: 370px;
-  padding: ${spacing.large};
   background-color: ${colors.background.muted};
   color: ${colors.text.primary};
   font-weight: 700;
@@ -111,7 +92,6 @@ export const ImageArea = styled.div`
 
   @media (max-width: 768px) {
     min-height: 280px;
-    width: 100%;
     max-width: none;
   }
 `;

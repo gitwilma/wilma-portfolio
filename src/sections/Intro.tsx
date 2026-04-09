@@ -1,11 +1,11 @@
 import { PageContainer } from "../components/layout/PageContainer";
 import { Label } from "../components/ui/Label";
 import { LinkButton } from "../components/ui/LinkButton";
+import meImage from "../assets/me.jpeg";
 import {
   IntroSection,
   IntroContent,
   ImageWrapper,
-  ImagePlaceholder,
   TextContent,
   Name,
   AccentInitial,
@@ -14,6 +14,7 @@ import {
   Description,
   BottomNav,
   LabelRow,
+  ProfileImage,
 } from "./Intro.styles";
 
 export const Intro = () => {
@@ -22,7 +23,10 @@ export const Intro = () => {
       <PageContainer>
         <IntroContent>
           <ImageWrapper>
-            <ImagePlaceholder aria-hidden="true" />
+            <ProfileImage
+  src={meImage}
+  alt="Portrait of Wilma Håkansson"
+/>
           </ImageWrapper>
 
           <TextContent>
@@ -74,8 +78,8 @@ export const Intro = () => {
 
         <BottomNav aria-label="Intro quick links">
           <LinkButton href="#selected-work">Selected work</LinkButton>
-          <LinkButton href="#skill-set">Skill set</LinkButton>
           <LinkButton href="#about-me">About me</LinkButton>
+          <LinkButton href="#skill-set">Skill set</LinkButton>
         </BottomNav>
       </PageContainer>
     </IntroSection>

@@ -1,10 +1,10 @@
 export const colors = {
   background: {
     base: "#FFFFFF",
-    surface: "#FFFFFF",
-    label: "#F9EAEA",
-    subtle: "#F7F7F7",
-    muted: "#F3F3F3",
+    surface: "#F0EFE0",
+    label: "#F0EFE0",
+    subtle: "#F6F5EA",
+    muted: "#E8E6D6",
   },
 
   text: {
@@ -19,13 +19,13 @@ export const colors = {
     hover: "#B50D10",
     pressed: "#990B0D",
     soft: "#F9EAEA",
-    softHover: "#F7E0E0",
+    softHover: "#F6F1D8",
   },
 
   border: {
     default: "#000000",
-    subtle: "#D9D9D9",
-    muted: "#BDBDBD",
+    subtle: "#D8D5C4",
+    muted: "#BBB6A3",
   },
 
   focus: {
@@ -33,10 +33,10 @@ export const colors = {
   },
 
   state: {
-    disabledBackground: "#F3F3F3",
+    disabledBackground: "#E7E4D3",
     disabledText: "#767676",
-    disabledBorder: "#BDBDBD",
-    hoverSurface: "#F7F7F7",
-    pressedSurface: "#ECECEC",
+    disabledBorder: "#BBB6A3",
+    hoverSurface: "#F6F3DE",
+    pressedSurface: "#E6E2CD",
   },
 } as const;

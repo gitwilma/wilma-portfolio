@@ -1,12 +1,10 @@
+import { PageContainer } from "../../components/layout/PageContainer";
 import type { WorkItem } from "./workItems";
 import {
   CloseButton,
   ContentGrid,
-  Divider,
   ExpandedCardContainer,
   ImageArea,
-  IntroTitle,
-  SectionHeader,
   TextBlock,
   TextColumn,
   TextHeading,
@@ -20,40 +18,34 @@ type ExpandedCardProps = {
 export const ExpandedCard = ({ item, onClose }: ExpandedCardProps) => {
   return (
     <ExpandedCardContainer aria-labelledby={`expanded-title-${item.id}`}>
-      <SectionHeader>
-        <IntroTitle id={`expanded-title-${item.id}`}>{item.introTitle}</IntroTitle>
-      </SectionHeader>
+      <PageContainer>
+        <ContentGrid>
+          <TextHeading>{item.title}</TextHeading>
+          <TextHeading>{item.category}</TextHeading>
 
-      <Divider />
+          <CloseButton
+            type="button"
+            onClick={onClose}
+            aria-label={`Close details for ${item.title}`}
+          >
+            X Close
+          </CloseButton>
 
-      <ContentGrid>
-        <TextHeading>{item.title}</TextHeading>
-        <TextHeading>{item.category}</TextHeading>
+          <TextColumn>
+            {item.leftColumn.map((paragraph) => (
+              <TextBlock key={paragraph}>{paragraph}</TextBlock>
+            ))}
+          </TextColumn>
 
-        <CloseButton
-          type="button"
-          onClick={onClose}
-          aria-label={`Close details for ${item.title}`}
-        >
-          × Close
-        </CloseButton>
+          <TextColumn>
+            {item.middleColumn.map((paragraph) => (
+              <TextBlock key={paragraph}>{paragraph}</TextBlock>
+            ))}
+          </TextColumn>
 
-        <TextColumn>
-          {item.leftColumn.map((paragraph) => (
-            <TextBlock key={paragraph}>{paragraph}</TextBlock>
-          ))}
-        </TextColumn>
-
-        <TextColumn>
-          {item.middleColumn.map((paragraph) => (
-            <TextBlock key={paragraph}>{paragraph}</TextBlock>
-          ))}
-        </TextColumn>
-
-        <ImageArea aria-label={item.imageAlt}>IMAGE AREA</ImageArea>
-      </ContentGrid>
-
-      <Divider />
+          <ImageArea>IMAGE AREA</ImageArea>
+        </ContentGrid>
+      </PageContainer>
     </ExpandedCardContainer>
   );
 };
