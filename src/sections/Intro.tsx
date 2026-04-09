@@ -1,5 +1,3 @@
-
-import { NavBar } from "../components/layout/NavBar";
 import { PageContainer } from "../components/layout/PageContainer";
 import { Label } from "../components/ui/Label";
 import { LinkButton } from "../components/ui/LinkButton";
@@ -21,7 +19,6 @@ import {
 export const Intro = () => {
   return (
     <IntroSection id="intro">
-        <NavBar />
       <PageContainer>
         <IntroContent>
           <ImageWrapper>
@@ -52,26 +49,35 @@ export const Intro = () => {
             </Description>
 
             <LabelRow>
-                 <Label
-                    href="https://www.linkedin.com/in/wilma-håkansson-7374a3234"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    LinkedIn
-                </Label>
+              <Label
+                href="https://www.linkedin.com/in/wilma-håkansson-7374a3234"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </Label>
 
-                <Label href="/cv.pdf" download>
-                    Download CV
-                </Label>
+              <Label
+                href="https://github.com/gitwilma"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </Label>
+
+              <Label href="/cv.pdf" download>
+                Download CV
+              </Label>
             </LabelRow>
-
           </TextContent>
         </IntroContent>
 
-       <BottomNav aria-label="Intro quick links">
-        <LinkButton href="#selected-work">Selected work</LinkButton>
-        <LinkButton href="#skill-set">Skill set</LinkButton>
-        <LinkButton href="#about-me">About me</LinkButton>
-      </BottomNav>
-    </PageContainer>
-  </IntroSection>
-)};
+        <BottomNav aria-label="Intro quick links">
+          <LinkButton href="#selected-work">Selected work</LinkButton>
+          <LinkButton href="#skill-set">Skill set</LinkButton>
+          <LinkButton href="#about-me">About me</LinkButton>
+        </BottomNav>
+      </PageContainer>
+    </IntroSection>
+  );
+};

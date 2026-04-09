@@ -1,35 +1,47 @@
 import styled from "@emotion/styled";
-import { spacing } from "../../theme/spacing";
-import { typography } from "../../theme/typography";
+import { PageContainer } from "./PageContainer";
 import { colors } from "../../theme/colors";
 import { radius } from "../../theme/radius";
+import { spacing } from "../../theme/spacing";
+import { typography } from "../../theme/typography";
 
 export const NavBar = () => {
   return (
-    <Wrapper>
-      <Brand href="#intro" aria-label="Go to homepage">
-        W
-      </Brand>
+    <Header>
+      <PageContainer>
+        <NavBarInner>
+          <Brand href="#intro" aria-label="Go to homepage">
+            W
+          </Brand>
 
-      <Nav aria-label="Section navigation">
-        <NavLink href="#selected-work">Selected work</NavLink>
-        <NavLink href="#skill-set">Skill set</NavLink>
-        <NavLink href="#about-me">About me</NavLink>
-      </Nav>
-    </Wrapper>
+          <Nav aria-label="Section navigation">
+            <NavLink href="#selected-work">Selected work</NavLink>
+            <NavLink href="#skill-set">Skill set</NavLink>
+            <NavLink href="#about-me">About me</NavLink>
+          </Nav>
+        </NavBarInner>
+      </PageContainer>
+    </Header>
   );
 };
 
-const Wrapper = styled.header`
+const Header = styled.header`
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: ${colors.background.base};
+`;
+
+const NavBarInner = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: ${spacing.large};
-
-  margin: 0 ${spacing.xxlarge} 0 ${spacing.large};
+  padding-top: ${spacing.medium};
+  padding-bottom: ${spacing.small};
 `;
 
- const Brand = styled.a`
+const Brand = styled.a`
   ${typography.display.xlarge};
   color: ${colors.accent.primary};
   text-decoration: none;
@@ -42,10 +54,11 @@ const Wrapper = styled.header`
   }
 `;
 
- const Nav = styled.nav`
+const Nav = styled.nav`
   display: flex;
   align-items: center;
   gap: ${spacing.xxlarge};
+  padding-top: ${spacing.medium};
 
   @media (max-width: 900px) {
     gap: ${spacing.large};
@@ -54,7 +67,7 @@ const Wrapper = styled.header`
   }
 `;
 
- const NavLink = styled.a`
+const NavLink = styled.a`
   ${typography.nav.large};
   color: ${colors.text.primary};
   text-decoration: none;

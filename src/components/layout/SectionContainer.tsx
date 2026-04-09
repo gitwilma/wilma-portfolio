@@ -1,18 +1,21 @@
 import styled from "@emotion/styled";
+import type { JSX, ReactNode } from "react";
 
 type SectionContainerProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   id?: string;
   className?: string;
+  as?: keyof JSX.IntrinsicElements;
 };
 
 export const SectionContainer = ({
   children,
   id,
   className,
+  as = "section",
 }: SectionContainerProps) => {
   return (
-    <Section id={id} className={className}>
+    <Section as={as} id={id} className={className}>
       {children}
     </Section>
   );

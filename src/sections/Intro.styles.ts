@@ -1,11 +1,10 @@
 import styled from "@emotion/styled";
+import { SectionContainer } from "../components/layout/SectionContainer";
 import { colors } from "../theme/colors";
 import { spacing } from "../theme/spacing";
 import { typography } from "../theme/typography";
-import { radius } from "../theme/radius";
 
-export const IntroSection = styled.section`
-  min-height: 100vh;
+export const IntroSection = styled(SectionContainer)`
   background-color: ${colors.background.base};
   color: ${colors.text.primary};
   padding-top: ${spacing.mediumLow};
@@ -101,59 +100,9 @@ export const LabelRow = styled.div`
   flex-wrap: wrap;
 `;
 
-export const SecondaryAction = styled.a`
-  ${typography.button.medium};
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: ${spacing.small} ${spacing.medium};
-  border-radius: ${radius.full};
-  background-color: ${colors.background.label};
-  color: ${colors.text.primary};
-  text-decoration: none;
-
-  &:hover {
-    background-color: ${colors.accent.soft};
-  }
-
-  &:focus-visible {
-    outline: 2px solid ${colors.focus.ring};
-    outline-offset: 4px;
-  }
-`;
-
 export const BottomNav = styled.div`
   display: flex;
   justify-content: center;
   gap: ${spacing.xlarge};
   flex-wrap: wrap;
-`;
-
-export const BottomNavButton = styled.a`
-  ${typography.button.medium};
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 56px;
-  padding: ${spacing.small} ${spacing.xlarge};
-  border: 1px solid ${colors.border.default};
-  border-radius: ${radius.xl};
-  background-color: ${colors.background.base};
-  color: ${colors.text.primary};
-  text-decoration: none;
-  text-transform: uppercase;
-
-  &:hover {
-    background-color: ${colors.state.hoverSurface};
-  }
-
-  &:active {
-    background-color: ${colors.state.pressedSurface};
-  }
-
-  &:focus-visible {
-    outline: 2px solid ${colors.focus.ring};
-    outline-offset: 4px;
-  }
 `;
