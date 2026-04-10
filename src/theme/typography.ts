@@ -62,6 +62,13 @@ export const typography = {
       font-weight: 400;
       line-height: 1.4;
     `,
+
+    xsmall: css`
+      font-family: ${fontFamily.body};
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.4;
+    `,
   },
 
   caption: {
@@ -83,6 +90,13 @@ export const typography = {
   },
 
   nav: {
+    xlarge: css`
+      font-family: ${fontFamily.heading};
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.4;
+    `,
+    
     large: css`
       font-family: ${fontFamily.heading};
       font-size: 16px;
