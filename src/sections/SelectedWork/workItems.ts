@@ -1,71 +1,116 @@
-export type WorkItem = {
-  id: string;
-  category: string;
-  title: string;
-  description: string;
-  hint?: string;
-  introTitle: string;
-  leftColumn: string[];
-  middleColumn: string[];
-  imageAlt: string;
-};
+import type { WorkItem } from "./types";
 
 export const workItems: WorkItem[] = [
   {
     id: "frontend",
+    type: "experience",
     category: "Frontend Developer",
-    title: "Stena Metall",
+    title: "Work experience",
     description:
-      "Worked on a Learning Hub feature from concept to production, with a focus on responsive views, clear structure and collaboration with UX and developers.",
+      "Frontend roles focused on production work, maintainable code and collaboration with UX and development teams.",
     hint: "Click to read more",
-    introTitle: "Selected work",
-    leftColumn: [
-      "Worked on a Learning Hub feature from concept to production, focusing on responsive interfaces, maintainable structure and close collaboration with UX and developers.",
-      "Contributed to turning complex product and business requirements into interfaces that are easier to understand and use in practice.",
-      "Focused on building solutions that are scalable, predictable and easier to maintain over time in a production environment.",
+    entries: [
+      {
+        id: "stena-metall",
+        company: "Stena Metall",
+        companyLogoSrc: "",
+        summary:
+          "Worked on frontend development in a production environment with a focus on clarity, maintainability and collaboration.",
+        details: [
+          "Worked on a Learning Hub feature from concept to production.",
+          "Focused on responsive interfaces, reusable structure and clear UX implementation.",
+          "Collaborated closely with UX and developers to translate requirements into practical solutions.",
+        ],
+        skills: [
+          { id: "react", label: "React" },
+          { id: "typescript", label: "TypeScript" },
+          { id: "css", label: "CSS" },
+        ],
+      },
     ],
-    middleColumn: [
-      "Worked across implementation details such as component structure, responsive behaviour and frontend quality in collaboration with the wider team.",
-      "Prioritised clarity, consistency and usability so that the final solution would support both user needs and long-term maintainability.",
-    ],
-    imageAlt: "Preview image for Stena Metall project",
   },
-  {
-    id: "content",
-    category: "Content Creator",
-    title: "Freelance",
-    description:
-      "Created visual and digital content for social media with a focus on clarity, communication and consistent brand tone across formats.",
-    hint: "Click to read more",
-    introTitle: "Selected work",
-    leftColumn: [
-      "Created visual and digital content for social media with a focus on clarity, consistency and communication.",
-      "Worked with content adapted to different formats and channels while keeping the brand expression coherent.",
-      "Balanced aesthetics with audience needs to make content more intuitive, engaging and easy to consume.",
-    ],
-    middleColumn: [
-      "Focused on structure, messaging and presentation to create assets that worked in real use cases rather than only looking good visually.",
-      "Worked iteratively with feedback and adjustments to improve clarity, tone and overall user response.",
-    ],
-    imageAlt: "Preview image for freelance content project",
-  },
+ 
   {
     id: "projects",
+    type: "projects",
     category: "Projects",
+    title: "Side projects",
+    description:
+      "A selection of personal projects with a focus on frontend, usability and interface structure.",
+    hint: "Click to read more",
+    intro:
+      "A selection of personal projects that highlight how I work with structure, UX, responsive design and maintainable frontend implementation.",
+    entries: [
+      {
+        id: "double-uu",
+        title: "Double UU",
+        imageSrc: "",
+        imageAlt: "",
+        description:
+          "A digital fashion magazine built with a focus on editorial design, clear structure and thoughtful user experience.",
+      },
+      {
+        id: "bullet-journal",
+        title: "Bullet Journal App",
+        imageSrc: "",
+        imageAlt: "",
+        description:
+          "A React Native app focused on structure, simplicity and calm interaction patterns for journaling and planning.",
+      },
+      {
+        id: "portfolio",
+        title: "Portfolio",
+        imageSrc: "",
+        imageAlt: "",
+        description:
+          "A personal portfolio focused on clean layout, typography, accessibility and maintainable component structure.",
+      },
+    ],
+  },
+
+   {
+    id: "content",
+    type: "content",
+    category: "Content & Branding",
     title: "Selected work",
     description:
-      "A collection of frontend and design-focused work that highlights usability, maintainability and thoughtful interface structure.",
+      "Examples of social media content, brand-focused material and visual communication work across different formats.",
     hint: "Click to read more",
-    introTitle: "Selected work",
-    leftColumn: [
-      "A collection of frontend and design-focused work that highlights usability, maintainability and thoughtful interface structure.",
-      "The projects reflect an interest in building interfaces that feel clear, intentional and easy to navigate.",
-      "They also show a consistent focus on structure and long-term quality, not only visual polish.",
+    entries: [
+      {
+        id: "campaign-1",
+        title: "Social media campaign",
+        summary:
+          "Created content with a focus on visual clarity, brand consistency and communication adapted to channel and audience.",
+        images: [
+          { id: "img-1", src: "", alt: "" },
+          { id: "img-2", src: "", alt: "" },
+          { id: "img-3", src: "", alt: "" },
+        ],
+        highlights: [
+          "Created content adapted for different formats and placements.",
+          "Worked with tone, structure and messaging.",
+          "Balanced visual expression with clarity and usability.",
+          "Produced assets iteratively based on feedback and performance needs.",
+        ],
+      },
+      {
+        id: "campaign-2",
+        title: "Branding material",
+        summary:
+          "Worked with communication and design-focused material for digital channels and brand visibility.",
+        images: [
+          { id: "img-4", src: "", alt: "" },
+          { id: "img-5", src: "", alt: "" },
+          { id: "img-6", src: "", alt: "" },
+        ],
+        highlights: [
+          "Developed visual material for consistent brand expression.",
+          "Adapted layouts and content for different use cases.",
+          "Focused on readability, hierarchy and communication.",
+          "Improved overall clarity and cohesiveness of assets.",
+        ],
+      },
     ],
-    middleColumn: [
-      "Across the work, the goal has been to create digital experiences that are both functional and carefully considered from a UX perspective.",
-      "This includes accessibility, responsiveness and component structures that are easier to extend and maintain.",
-    ],
-    imageAlt: "Preview image for selected personal projects",
   },
 ];

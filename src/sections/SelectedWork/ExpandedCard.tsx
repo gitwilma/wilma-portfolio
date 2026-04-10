@@ -1,14 +1,13 @@
 import { PageContainer } from "../../components/layout/PageContainer";
-import type { WorkItem } from "./workItems";
+import type { WorkItem } from "./types";
 import {
   CloseButton,
-  ContentGrid,
   ExpandedCardContainer,
-  ImageArea,
-  TextBlock,
-  TextColumn,
-  TextHeading,
+  ExpandedCardHeader,
 } from "./ExpandedCard.styles";
+import { ExperienceExpandedContent } from "./components/ExperienceExpandedContent";
+import { ContentExpandedContent } from "./components/ContentExpandedContent";
+import { ProjectsExpandedContent } from "./components/ProjectsExpandedContent";
 
 type ExpandedCardProps = {
   item: WorkItem;
@@ -17,12 +16,9 @@ type ExpandedCardProps = {
 
 export const ExpandedCard = ({ item, onClose }: ExpandedCardProps) => {
   return (
-    <ExpandedCardContainer aria-labelledby={`expanded-title-${item.id}`}>
+    <ExpandedCardContainer aria-labelledby={`selected-work-expanded-${item.id}`}>
       <PageContainer>
-        <ContentGrid>
-          <TextHeading>{item.title}</TextHeading>
-          <TextHeading>{item.category}</TextHeading>
-
+        <ExpandedCardHeader>
           <CloseButton
             type="button"
             onClick={onClose}
@@ -30,21 +26,19 @@ export const ExpandedCard = ({ item, onClose }: ExpandedCardProps) => {
           >
             X Close
           </CloseButton>
+        </ExpandedCardHeader>
 
-          <TextColumn>
-            {item.leftColumn.map((paragraph) => (
-              <TextBlock key={paragraph}>{paragraph}</TextBlock>
-            ))}
-          </TextColumn>
+        {item.type === "experience" && (
+          <ExperienceExpandedContent entries={item.entries} />
+        )}
 
-          <TextColumn>
-            {item.middleColumn.map((paragraph) => (
-              <TextBlock key={paragraph}>{paragraph}</TextBlock>
-            ))}
-          </TextColumn>
+        {item.type === "content" && (
+          <ContentExpandedContent entries={item.entries} />
+        )}
 
-          <ImageArea>IMAGE AREA</ImageArea>
-        </ContentGrid>
+        {item.type === "projects" && (
+          <ProjectsExpandedContent intro={item.intro} entries={item.entries} />
+        )}
       </PageContainer>
     </ExpandedCardContainer>
   );
