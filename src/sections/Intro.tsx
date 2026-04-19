@@ -10,7 +10,6 @@ import {
   Name,
   AccentInitial,
   LastName,
-  Role,
   Description,
   BottomNav,
   LabelRow,
@@ -24,9 +23,9 @@ export const Intro = () => {
         <IntroContent>
           <ImageWrapper>
             <ProfileImage
-  src={meImage}
-  alt="Portrait of Wilma Håkansson"
-/>
+                src={meImage}
+                alt="Portrait of Wilma Håkansson"
+            />
           </ImageWrapper>
 
           <TextContent>
@@ -37,19 +36,8 @@ export const Intro = () => {
               <LastName>HÅKANSSON</LastName>
             </Name>
 
-            <Role>Frontend developer</Role>
-
             <Description>
-              Frontend developer with a strong interest in UX, accessibility, and
-              building clear, user-friendly interfaces. I enjoy turning complex
-              requirements into intuitive solutions that work in practice.
-            </Description>
-
-            <Description>
-              I care about structure, maintainability, and predictable user
-              flows, and I thrive in collaborative environments where
-              communication and shared responsibility are part of how the team
-              works.
+              Frontend developer working with both development and content, focused on creating clear, user-friendly and maintainable digital experiences.
             </Description>
 
             <LabelRow>

@@ -4,6 +4,7 @@ import {
   CloseButton,
   ExpandedCardContainer,
   ExpandedCardHeader,
+  Heading,
 } from "./ExpandedCard.styles";
 import { ExperienceExpandedContent } from "./components/ExperienceExpandedContent";
 import { ContentExpandedContent } from "./components/ContentExpandedContent";
@@ -19,6 +20,11 @@ export const ExpandedCard = ({ item, onClose }: ExpandedCardProps) => {
     <ExpandedCardContainer aria-labelledby={`selected-work-expanded-${item.id}`}>
       <PageContainer>
         <ExpandedCardHeader>
+            <Heading id={`selected-work-expanded-${item.id}`}>
+                {item.type === "experience" && item.entries[0]?.company
+                ? item.entries[0].company
+                : item.title}
+            </Heading>
           <CloseButton
             type="button"
             onClick={onClose}

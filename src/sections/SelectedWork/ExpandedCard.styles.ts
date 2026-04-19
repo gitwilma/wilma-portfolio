@@ -13,13 +13,12 @@ export const ExpandedCardContainer = styled.section`
 
 export const ExpandedCardHeader = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: flex-start;
   gap: ${spacing.large};
   padding-top: ${spacing.large};
-  padding-bottom: ${spacing.large};
+  padding-bottom: ${spacing.xsmall};
 `;
-
 
 export const CloseButton = styled.button`
   ${typography.nav.large};
@@ -32,4 +31,10 @@ export const CloseButton = styled.button`
   &:hover {
     color: ${colors.accent.primary};
   }
+`;
+
+export const Heading = styled.h2`
+  ${typography.heading.large};
+  color: ${colors.text.primary};
+  margin: 0;
 `;

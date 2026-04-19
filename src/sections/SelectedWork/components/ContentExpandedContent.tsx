@@ -2,9 +2,9 @@ import type { ContentEntry } from "../types";
 import {
   ContentEntryArticle,
   ContentEntryGrid,
+  ContentImage,
   ContentImagesGrid,
   ContentIntro,
-  ContentPlaceholder,
   ContentSectionStack,
   ContentTextColumn,
   ContentTitle,
@@ -28,7 +28,7 @@ export const ContentExpandedContent = ({ entries }: Props) => {
           <ContentEntryGrid>
             <ContentImagesGrid aria-label={`${entry.title} examples`}>
               {entry.images.map((image) => (
-                <ContentPlaceholder key={image.id} aria-hidden="true" />
+                <ContentImage key={image.id} src={image.src} alt={image.alt} />
               ))}
             </ContentImagesGrid>
 

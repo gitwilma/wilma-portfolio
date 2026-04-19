@@ -1,9 +1,13 @@
 import {
-  CompanyLogoCircle,
+  CompanyHeader,
+  CompanyIdentity,
+  ExperienceBodyGrid,
   ExperienceEntryArticle,
-  ExperienceEntryGrid,
-  ExperienceEntryHeader,
+  ExperienceEntryRole,
   ExperienceEntrySummary,
+  ExperienceList,
+  ExperienceListItem,
+  ExperienceSectionTitle,
   ExperienceSkills,
   ExperienceSkillTag,
   ExperienceTextColumn,
@@ -20,33 +24,35 @@ export const ExperienceExpandedContent = ({ entries }: Props) => {
   return (
     <SectionStack>
       {entries.map((entry) => (
-        <ExperienceEntryArticle key={entry.id} aria-labelledby={`${entry.id}-title`}>
-          <ExperienceEntryGrid>
+        <ExperienceEntryArticle
+          key={entry.id}
+          aria-labelledby={`${entry.id}-company`}
+        >
+          <CompanyHeader>
+            <CompanyIdentity>
+                <ExperienceEntryRole>{entry.role}</ExperienceEntryRole>
+            </CompanyIdentity>
+          </CompanyHeader>
+
+          <ExperienceBodyGrid>
             <ExperienceTextColumn>
-              <ExperienceEntryHeader id={`${entry.id}-title`}>
-                {entry.company}
-              </ExperienceEntryHeader>
+              <ExperienceSectionTitle>About the role</ExperienceSectionTitle>
               <ExperienceEntrySummary>{entry.summary}</ExperienceEntrySummary>
-              {entry.details.map((detail) => (
-                <p key={detail}>{detail}</p>
-              ))}
             </ExperienceTextColumn>
 
             <ExperienceTextColumn>
-              <ExperienceEntryHeader>Role highlights</ExperienceEntryHeader>
-              {entry.details.slice(0, 2).map((detail) => (
-                <p key={detail}>{detail}</p>
-              ))}
+              <ExperienceSectionTitle>Key responsibilities</ExperienceSectionTitle>
+              <ExperienceList>
+                {entry.details.slice(0, 5).map((detail) => (
+                  <ExperienceListItem key={detail}>{detail}</ExperienceListItem>
+                ))}
+              </ExperienceList>
             </ExperienceTextColumn>
 
             <ExperienceVisualColumn>
-              <CompanyLogoCircle aria-hidden="true">
-                COMPANY
-                <br />
-                LOGO
-              </CompanyLogoCircle>
-
-              <ExperienceSkills aria-label={`Technologies used at ${entry.company}`}>
+              <ExperienceSkills
+                aria-label={`Technologies used at ${entry.company}`}
+              >
                 {entry.skills.map((skill) => (
                   <li key={skill.id}>
                     <ExperienceSkillTag>{skill.label}</ExperienceSkillTag>
@@ -54,7 +60,7 @@ export const ExperienceExpandedContent = ({ entries }: Props) => {
                 ))}
               </ExperienceSkills>
             </ExperienceVisualColumn>
-          </ExperienceEntryGrid>
+          </ExperienceBodyGrid>
         </ExperienceEntryArticle>
       ))}
     </SectionStack>

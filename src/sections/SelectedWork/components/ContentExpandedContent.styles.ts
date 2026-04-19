@@ -48,10 +48,9 @@ export const ContentImagesGrid = styled.div`
   gap: ${spacing.medium};
 `;
 
-export const ContentPlaceholder = styled.div`
+export const ContentImage = styled.img`
   width: 100%;
-  aspect-ratio: 1 / 1;
-  background: #d9d9d9;
+  aspect-ratio: 9 / 16;
 `;
 
 export const ContentTextColumn = styled.div`

@@ -9,6 +9,7 @@ export type SkillBadge = {
 export type ExperienceEntry = {
   id: string;
   company: string;
+  role: string;
   companyLogoSrc?: string;
   summary: string;
   details: string[];
@@ -22,6 +23,11 @@ export type ProjectEntry = {
   imageSrc?: string;
   imageAlt?: string;
   description: string;
+  links?: {
+    type: "github" | "figma" | "live";
+    url: string;
+    label: string;
+  }[] | undefined;
 };
 
 export type ContentEntry = {

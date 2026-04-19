@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
+import { colors } from "../../../theme/colors";
 import { spacing } from "../../../theme/spacing";
 import { typography } from "../../../theme/typography";
-import { colors } from "../../../theme/colors";
 
 export const ProjectsSection = styled.section`
   display: flex;
@@ -44,12 +44,34 @@ export const ProjectCard = styled.article`
   display: flex;
   flex-direction: column;
   gap: ${spacing.small};
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(240, 239, 224, 0.28);
+    pointer-events: none;
+    transition: opacity 160ms ease;
+  }
+
+  &:hover::after {
+    opacity: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &::after {
+      transition: none;
+    }
+  }
 `;
 
-export const ProjectCardImage = styled.div`
+export const ProjectCardImage = styled.img`
+  display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  background: #d9d9d9;
+  aspect-ratio: 16 / 8;
 `;
 
 export const ProjectCardText = styled.div`
@@ -68,4 +90,11 @@ export const ProjectTitle = styled.h4`
   margin: 0;
   ${typography.body.large};
   font-weight: 600;
+`;
+
+export const ProjectLinksRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: ${spacing.small};
+  margin-top: ${spacing.small};
 `;

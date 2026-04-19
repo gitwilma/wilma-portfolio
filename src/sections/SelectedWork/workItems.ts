@@ -13,13 +13,16 @@ export const workItems: WorkItem[] = [
       {
         id: "stena-metall",
         company: "Stena Metall",
-        companyLogoSrc: "",
-        summary:
-          "Worked on frontend development in a production environment with a focus on clarity, maintainability and collaboration.",
+        role: "Frontend Developer",
+        companyLogoSrc: "/stena-logo.svg",
+        summary: 
+          "Worked on a Learning Hub feature from concept to production, focusing on responsive interfaces and clear user flows across tablet and mobile. Collaborated closely with UX and developers, owning features end-to-end and contributing to structured, maintainable solutions in a complex system environment.",
         details: [
-          "Worked on a Learning Hub feature from concept to production.",
-          "Focused on responsive interfaces, reusable structure and clear UX implementation.",
-          "Collaborated closely with UX and developers to translate requirements into practical solutions.",
+          "Developed responsive tablet and mobile views based on UX designs ",
+          "Translated requirements into clear, user-friendly interfaces ",
+          "Owned features from requirements to implementation",
+          "Integrated frontend with backend APIs in a complex system",
+          "Contributed to improved team structure and communication",
         ],
         skills: [
           { id: "react", label: "React" },
@@ -44,27 +47,40 @@ export const workItems: WorkItem[] = [
       {
         id: "double-uu",
         title: "Double UU",
-        imageSrc: "",
-        imageAlt: "",
+        imageSrc: "./double-uu.png",
+        imageAlt: "Double UU website",
         description:
-          "A digital fashion magazine built with a focus on editorial design, clear structure and thoughtful user experience.",
-      },
+          "Built with Next.js and TypeScript, with a custom CMS-like admin layer for creating and managing content stored in MongoDB. The application uses server-rendered pages, structured data flows and authenticated admin functionality via NextAuth, enabling dynamic, database-driven content across the platform.",
+        links: [
+        { type: "github", url: "https://github.com/gitwilma/double-uu", label: "GitHub" },
+        { type: "figma", url: "", label: "Figma" },
+        { type: "live", url: "https://double-uu.vercel.app/", label: "Live site" }
+        ]
+        },
       {
         id: "bullet-journal",
         title: "Bullet Journal App",
-        imageSrc: "",
-        imageAlt: "",
+        imageSrc: "./bullet-journal.png",
+        imageAlt: "Bullet Journal app",
         description:
-          "A React Native app focused on structure, simplicity and calm interaction patterns for journaling and planning.",
-      },
+          "A mobile journaling app for daily notes and mood tracking, built with React Native and Expo. The project is under active development, with upcoming features including authentication, user-specific data and cloud-based storage. Designed as a long-term project to deepen my understanding of mobile architecture, state management and building scalable, user-centered applications.",
+        links: [
+        { type: "github", url: "https://github.com/gitwilma/bullet-journal", label: "GitHub" },
+        { type: "figma", url: "https://www.figma.com/design/K4cbn1a8rQbfOGjiGBfRuj/bullet-journal?node-id=0-1&p=f&t=3n6zeCg1pIVRlNf8-0", label: "Figma" },
+        ]
+        },
       {
         id: "portfolio",
         title: "Portfolio",
-        imageSrc: "",
-        imageAlt: "",
+        imageSrc: "./portfolio.png",
+        imageAlt: "Portfolio website",
         description:
-          "A personal portfolio focused on clean layout, typography, accessibility and maintainable component structure.",
-      },
+          "Built with React and TypeScript using a component-driven architecture with clear separation between layout, UI and feature logic. The application is structured around reusable components and a data-driven approach, with typed content models powering dynamic sections such as Selected Work and Expanded views. Styled using Emotion with a consistent design system for colors, spacing and typography.",
+        links: [
+        { type: "github", url: "https://github.com/gitwilma/wilma-portfolio", label: "GitHub" },
+        { type: "figma", url: "https://www.figma.com/design/oRaysWgSlUXKs10R4sF9Kf/Portfolio-2026?node-id=1-3&t=3n6zeCg1pIVRlNf8-1", label: "Figma" },
+        ]
+        },
     ],
   },
 
@@ -83,9 +99,9 @@ export const workItems: WorkItem[] = [
         summary:
           "Created content with a focus on visual clarity, brand consistency and communication adapted to channel and audience.",
         images: [
-          { id: "img-1", src: "", alt: "" },
-          { id: "img-2", src: "", alt: "" },
-          { id: "img-3", src: "", alt: "" },
+          { id: "img-1", src: "./epok-2.jpg", alt: "" },
+          { id: "img-2", src: "./epok-3.jpg", alt: "" },
+          { id: "img-3", src: "./epok-4.jpg", alt: "" },
         ],
         highlights: [
           "Created content adapted for different formats and placements.",
@@ -100,9 +116,9 @@ export const workItems: WorkItem[] = [
         summary:
           "Worked with communication and design-focused material for digital channels and brand visibility.",
         images: [
-          { id: "img-4", src: "", alt: "" },
-          { id: "img-5", src: "", alt: "" },
-          { id: "img-6", src: "", alt: "" },
+          { id: "img-4", src: "./chocoberry-1.png", alt: "" },
+          { id: "img-5", src: "./chocoberry-2.png", alt: "" },
+          { id: "img-6", src: "./chocoberry-3.png", alt: "" },
         ],
         highlights: [
           "Developed visual material for consistent brand expression.",
