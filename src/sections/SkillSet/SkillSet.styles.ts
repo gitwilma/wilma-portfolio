@@ -28,7 +28,10 @@ export const CardGrid = styled.div`
   align-items: stretch;
 
   @media (max-width: 1100px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: ${spacing.xlarge};
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media (max-width: 700px) {
@@ -57,6 +60,12 @@ export const SkillCard = styled.div<{
   border-radius: ${(props) => props.borderRadius || radius.lg};
 
   background-color: ${colors.state.hoverSurface};
+
+  @media (max-width: 1100px) and (min-width: 701px) {
+    border: none !important;
+    border-radius: 0 !important;
+    background-color: ${colors.state.hoverSurface};
+  }
 
   @media (max-width: 700px) {
     border-style: solid !important;

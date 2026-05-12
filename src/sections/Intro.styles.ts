@@ -22,12 +22,11 @@ export const IntroContent = styled.div`
   max-width: 920px;
   margin: 0 auto;
   padding-top: ${spacing.xlarge};
-  padding-bottom: ${spacing.xxlarge};
+  padding-bottom: ${spacing.xlarge};
 
   @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    max-width: 680px;
-    padding-top: ${spacing.xxlarge};
+    gap: 0;
+    padding-bottom: ${spacing.large};
   }
 
   @media (max-width: 700px) {
@@ -43,9 +42,6 @@ export const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
 
-  @media (max-width: 900px) {
-    justify-content: flex-start;
-  }
   @media (max-width: 700px) {
     display: none;
   }
@@ -58,7 +54,7 @@ export const ProfileImage = styled.img`
   display: block;
 
   @media (max-width: 900px) {
-    width: min(100%, 320px);
+    width: 220px;
   }
 `;
 
@@ -67,6 +63,7 @@ export const TextContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: ${spacing.mediumLow};
+  
   @media (max-width: 700px) {
     align-items: flex-start;
     margin-left: 0;

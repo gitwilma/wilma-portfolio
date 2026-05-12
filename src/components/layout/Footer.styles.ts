@@ -111,7 +111,7 @@ export const FooterInner = styled.div`
   gap: ${spacing.huge};
   align-items: start;
 
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 0;
   }
