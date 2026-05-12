@@ -45,7 +45,6 @@ export const ProfileImage = styled.img`
   aspect-ratio: 3 / 4;
   object-fit: cover;
   display: block;
-  border: 2px solid ${colors.border.default};
 
   @media (max-width: 900px) {
     width: min(100%, 320px);

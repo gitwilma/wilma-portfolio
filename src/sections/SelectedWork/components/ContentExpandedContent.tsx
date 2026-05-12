@@ -6,9 +6,7 @@ import {
   ContentImagesGrid,
   ContentIntro,
   ContentSectionStack,
-  ContentTextColumn,
   ContentTitle,
-  HighlightsList,
 } from "./ContentExpandedContent.styles";
 
 type Props = {
@@ -27,20 +25,15 @@ export const ContentExpandedContent = ({ entries }: Props) => {
 
           <ContentEntryGrid>
             <ContentImagesGrid aria-label={`${entry.title} examples`}>
-              {entry.images.map((image) => (
+              {entry.images.map((image) => 
+              image.url ? (
+                    <a key={image.id} href={image.url} target="_blank" rel="noopener noreferrer">
+                      <ContentImage src={image.src} alt={image.alt} />
+                    </a>
+              ) : (
                 <ContentImage key={image.id} src={image.src} alt={image.alt} />
               ))}
             </ContentImagesGrid>
-
-            <ContentTextColumn>
-              <ContentTitle>Highlights</ContentTitle>
-
-              <HighlightsList>
-                {entry.highlights.map((highlight) => (
-                  <li key={highlight}>{highlight}</li>
-                ))}
-              </HighlightsList>
-            </ContentTextColumn>
           </ContentEntryGrid>
         </ContentEntryArticle>
       ))}

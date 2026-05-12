@@ -4,6 +4,7 @@ import {
   CardGrid,
   CardTitle,
   LogoGrid,
+  Preamble,
   Section,
   SkillCard,
   SkillContent,
@@ -61,6 +62,7 @@ export const SkillSet = () => {
     <Section id="skill-set" aria-labelledby="skill-set-title">
       <PageContainer>
         <Title id="skill-set-title">Skill set</Title>
+        <Preamble>This is a snapshot of the tools and areas I have the most experience in.<br/>At the core, I’m driven by curiosity and a strong motivation to learn. I believe the most important part of any role is the willingness to grow and contribute, and to acquire whatever skills are needed to move a product forward.</Preamble>
 
         <CardGrid>
           <SkillCard key={skillCategories[0].id}>

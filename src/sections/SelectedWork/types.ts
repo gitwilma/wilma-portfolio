@@ -14,6 +14,8 @@ export type ExperienceEntry = {
   summary: string;
   details: string[];
   skills: SkillBadge[];
+  imageSrc?: string;
+  imageAlt?: string;
 };
 
 
@@ -38,8 +40,8 @@ export type ContentEntry = {
     id: string;
     src?: string;
     alt?: string;
+    url?: string;
   }[];
-  highlights: string[];
 };
 
 type BaseWorkItem = {

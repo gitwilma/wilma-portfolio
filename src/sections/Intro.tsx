@@ -1,7 +1,7 @@
 import { PageContainer } from "../components/layout/PageContainer";
 import { Label } from "../components/ui/Label";
 import { LinkButton } from "../components/ui/LinkButton";
-import meImage from "../assets/me.jpeg";
+import meImage from "../assets/me-img4.jpg";
 import {
   IntroSection,
   IntroContent,
@@ -66,7 +66,7 @@ export const Intro = () => {
 
         <BottomNav aria-label="Intro quick links">
           <LinkButton href="#selected-work">Selected work</LinkButton>
-          <LinkButton href="#about-me">About me</LinkButton>
+          {/* <LinkButton href="#about-me">About me</LinkButton> */}
           <LinkButton href="#skill-set">Skill set</LinkButton>
         </BottomNav>
       </PageContainer>

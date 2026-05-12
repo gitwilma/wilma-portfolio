@@ -19,6 +19,7 @@ export const ContentIntro = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${spacing.xsmall};
+  width: 60%;
 
   p {
     margin: 0;
@@ -44,13 +45,20 @@ export const ContentEntryGrid = styled.div`
 
 export const ContentImagesGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: ${spacing.medium};
+  grid-template-columns: repeat(4, 1fr);
+  gap: ${spacing.mediumHigh};
 `;
 
 export const ContentImage = styled.img`
   width: 100%;
-  aspect-ratio: 9 / 16;
+  
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 160ms ease;
+
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 export const ContentTextColumn = styled.div`

@@ -13,7 +13,13 @@ export const Section = styled(SectionContainer)`
 
 export const Title = styled.h2`
   ${typography.display.large};
-  margin: 0 0 ${spacing.xxlarge};
+  margin: 0 0 ${spacing.mediumLow};
+`;
+
+export const Preamble = styled.p`
+  ${typography.body.large};
+  color: ${colors.text.secondary};
+  margin: 0 0 ${spacing.xlarge};
 `;
 
 export const CardGrid = styled.div`
@@ -54,7 +60,7 @@ export const SkillCard = styled.div<{
 export const CardTitle = styled.h3`
   ${typography.body.large};
   font-weight: 700;
-  margin: 0 0 ${spacing.xlarge};
+  margin: 0 0 ${spacing.mediumHigh};
   text-align: center;
 `;
 

@@ -1,7 +1,7 @@
 
 import { PageContainer } from "../components/layout/PageContainer";
 import { Content, Description, ImageColumn, PortraitImage, Section, TextColumn, Title } from "./AboutMe.styles";
-import meImage from "../assets/me.jpeg";
+import meImage from "../assets/me-img-2.png";
 
 
 export const AboutMe = () => {

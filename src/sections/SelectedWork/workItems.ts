@@ -15,6 +15,8 @@ export const workItems: WorkItem[] = [
         company: "Stena Metall",
         role: "Frontend Developer",
         companyLogoSrc: "/stena-logo.svg",
+        imageSrc: "/stena-office.svg",
+        imageAlt: "Stena Metall office",
         summary: 
           "Worked on a Learning Hub feature from concept to production, focusing on responsive interfaces and clear user flows across tablet and mobile. Collaborated closely with UX and developers, owning features end-to-end and contributing to structured, maintainable solutions in a complex system environment.",
         details: [
@@ -28,6 +30,30 @@ export const workItems: WorkItem[] = [
           { id: "react", label: "React" },
           { id: "typescript", label: "TypeScript" },
           { id: "css", label: "CSS" },
+        ],
+      },
+    ],
+  },
+
+   {
+    id: "content",
+    type: "content",
+    category: "Content & Branding",
+    title: "Freelance Content Creator",
+    description:
+      "Social media, branding, and digital storytelling focused on authentic content and audience connection.",
+    hint: "Click to read more",
+    entries: [
+      {
+        id: "campaign-1",
+        title: "Social media, branding, and digital storytelling focused on authentic content and audience connection.",
+        summary:
+          "Currently freelancing as a Content Creator, working with social media, branding, and digital storytelling. I create both organic and promotional content tailored to the right audience, while also working with strategy, planning, visual identity, and brand presence across digital platforms.",
+        images: [
+          { id: "img-1", src: "./BYTTAN-PORTFOLIO.png", alt: "", url: "https://www.instagram.com/byttaniparken/" },
+          { id: "img-2", src: "./CHOCO-BERRY-PORTFOLIO.png", alt: "", url: "https://www.instagram.com/chocoberry.swe/" },
+          { id: "img-3", src: "./EPOK-PORTFOLIO.png", alt: "", url: "https://www.instagram.com/epokoland/" },
+          { id: "img-4", src: "./TACOS-PORTFOLIO.png", alt: "", url: "" },
         ],
       },
     ],
@@ -81,52 +107,6 @@ export const workItems: WorkItem[] = [
         { type: "figma", url: "https://www.figma.com/design/oRaysWgSlUXKs10R4sF9Kf/Portfolio-2026?node-id=1-3&t=3n6zeCg1pIVRlNf8-1", label: "Figma" },
         ]
         },
-    ],
-  },
-
-   {
-    id: "content",
-    type: "content",
-    category: "Content & Branding",
-    title: "Selected work",
-    description:
-      "Examples of social media content, brand-focused material and visual communication work across different formats.",
-    hint: "Click to read more",
-    entries: [
-      {
-        id: "campaign-1",
-        title: "Social media campaign",
-        summary:
-          "Created content with a focus on visual clarity, brand consistency and communication adapted to channel and audience.",
-        images: [
-          { id: "img-1", src: "./epok-2.jpg", alt: "" },
-          { id: "img-2", src: "./epok-3.jpg", alt: "" },
-          { id: "img-3", src: "./epok-4.jpg", alt: "" },
-        ],
-        highlights: [
-          "Created content adapted for different formats and placements.",
-          "Worked with tone, structure and messaging.",
-          "Balanced visual expression with clarity and usability.",
-          "Produced assets iteratively based on feedback and performance needs.",
-        ],
-      },
-      {
-        id: "campaign-2",
-        title: "Branding material",
-        summary:
-          "Worked with communication and design-focused material for digital channels and brand visibility.",
-        images: [
-          { id: "img-4", src: "./chocoberry-1.png", alt: "" },
-          { id: "img-5", src: "./chocoberry-2.png", alt: "" },
-          { id: "img-6", src: "./chocoberry-3.png", alt: "" },
-        ],
-        highlights: [
-          "Developed visual material for consistent brand expression.",
-          "Adapted layouts and content for different use cases.",
-          "Focused on readability, hierarchy and communication.",
-          "Improved overall clarity and cohesiveness of assets.",
-        ],
-      },
     ],
   },
 ];
