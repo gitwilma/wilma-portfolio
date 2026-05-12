@@ -18,6 +18,10 @@ export const ExpandedCardHeader = styled.div`
   gap: ${spacing.large};
   padding-top: ${spacing.large};
   padding-bottom: ${spacing.xsmall};
+
+  @media (max-width: 900px) {
+    padding-bottom: ${spacing.medium};
+  }
 `;
 
 export const CloseButton = styled.button`

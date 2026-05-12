@@ -72,6 +72,12 @@ export const CardGrid = styled.div`
   @media (max-width: 1100px) {
     grid-template-columns: 1fr;
   }
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    gap: ${spacing.large};
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 `;
 
 export const CardTop = styled.div`

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import meImage from "../../assets/me-img4.jpg";
 import { PageContainer } from "../layout/PageContainer";
 import { Label } from "../ui/Label";
 import {
@@ -13,6 +14,7 @@ import {
   FooterDescription,
   FooterInner,
   FooterLeft,
+  FooterMobileImage,
   FooterRight,
   FooterTop,
   FooterWrapper,
@@ -29,11 +31,9 @@ export const Footer = () => {
 
     const timeout = window.setTimeout(() => {
       setCopied(false);
-    }, 200);
+    }, 1500);
 
-    return () => {
-      window.clearTimeout(timeout);
-    };
+    return () => window.clearTimeout(timeout);
   }, [copied]);
 
   const handleCopy = async () => {
@@ -47,8 +47,8 @@ export const Footer = () => {
 
   return (
     <FooterWrapper>
-      <PageContainer>
-        <FooterTop>
+      <FooterTop>
+        <PageContainer>
           <FooterInner>
             <FooterLeft>
               <Name>
@@ -66,6 +66,11 @@ export const Footer = () => {
               <FooterCopyright>
                 © {new Date().getFullYear()}, Wilma Håkansson
               </FooterCopyright>
+
+              <FooterMobileImage
+                src={meImage}
+                alt="Portrait of Wilma Håkansson"
+              />
             </FooterLeft>
 
             <FooterRight>
@@ -94,7 +99,6 @@ export const Footer = () => {
               </FooterActions>
 
               <EmailBlock>
-
                 <CopyEmailButton
                   type="button"
                   onClick={handleCopy}
@@ -113,8 +117,8 @@ export const Footer = () => {
               </EmailBlock>
             </FooterRight>
           </FooterInner>
-        </FooterTop>
-      </PageContainer>
+        </PageContainer>
+      </FooterTop>
 
       <FooterBottom aria-hidden="true" />
     </FooterWrapper>

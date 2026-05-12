@@ -33,6 +33,9 @@ export const CardGrid = styled.div`
 
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
+    gap: ${spacing.large};
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 `;
 
@@ -40,7 +43,6 @@ export const SkillCard = styled.div<{
   borderStyle?: string;
   borderRadius?: string;
 }>`
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,6 +57,13 @@ export const SkillCard = styled.div<{
   border-radius: ${(props) => props.borderRadius || radius.lg};
 
   background-color: ${colors.state.hoverSurface};
+
+  @media (max-width: 700px) {
+    border-style: solid !important;
+    border-radius: ${radius.lg} !important;
+    border-color: ${colors.border.default} !important;
+    border-left-width: 1px !important;
+  }
 `;
 
 export const CardTitle = styled.h3`

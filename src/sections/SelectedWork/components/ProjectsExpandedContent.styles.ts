@@ -35,6 +35,13 @@ export const ProjectsGrid = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    gap: ${spacing.large};
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
   }

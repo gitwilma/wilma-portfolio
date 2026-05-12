@@ -29,6 +29,14 @@ export const IntroContent = styled.div`
     max-width: 680px;
     padding-top: ${spacing.xxlarge};
   }
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    max-width: 100vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    gap: ${spacing.large};
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -37,6 +45,9 @@ export const ImageWrapper = styled.div`
 
   @media (max-width: 900px) {
     justify-content: flex-start;
+  }
+  @media (max-width: 700px) {
+    display: none;
   }
 `;
 
@@ -56,6 +67,12 @@ export const TextContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: ${spacing.mediumLow};
+  @media (max-width: 700px) {
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
 `;
 
 export const Name = styled.h1`

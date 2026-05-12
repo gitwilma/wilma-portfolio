@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import { colors } from "../../../theme/colors";
+import { radius } from "../../../theme/radius";
 import { spacing } from "../../../theme/spacing";
 import { typography } from "../../../theme/typography";
-import { radius } from "../../../theme/radius";
 
 export const SectionStack = styled.div`
   display: flex;
@@ -69,6 +69,13 @@ export const ExperienceBodyGrid = styled.div`
   @media (max-width: 1100px) {
     grid-template-columns: 1fr;
     gap: ${spacing.xlarge};
+  }
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    gap: ${spacing.large};
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 `;
 
